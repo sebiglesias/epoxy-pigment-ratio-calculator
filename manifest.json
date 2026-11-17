@@ -1,0 +1,15 @@
+{
+  "name": "Epoxy Resin Pigment Ratio & Tint Loading Calculator",
+  "short_name": "Pigment Ratio Calc",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#19030e",
+  "theme_color": "#ec4899",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

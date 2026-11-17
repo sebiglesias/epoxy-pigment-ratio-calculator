@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epoxy Resin Pigment Ratio & Tint Loading Calculator — Accurate Material Estimator</title>
+  <meta name="description" content="Calculate exact gram weight and percentage ratios for mica powders, alcohol inks, and liquid pigment dispersions in epoxy casting projects.">
+  <link rel="canonical" href="https://sebiglesias.com.ar/epoxy-pigment-ratio-calculator/">
+  <meta name="theme-color" content="#ec4899">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Epoxy Resin Pigment Ratio & Tint Loading Calculator">
+  <meta property="og:description" content="Calculate exact gram weight and percentage ratios for mica powders, alcohol inks, and liquid pigment dispersions in epoxy casting projects.">
+  <meta property="og:url" content="https://sebiglesias.com.ar/epoxy-pigment-ratio-calculator/">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BNDBQP0W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2BNDBQP0W7');
+  </script>
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-3381238987477190">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3381238987477190" crossorigin="anonymous"></script>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Epoxy Resin Pigment Ratio & Tint Loading Calculator",
+    "url": "https://sebiglesias.com.ar/epoxy-pigment-ratio-calculator/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "description": "Calculate exact gram weight and percentage ratios for mica powders, alcohol inks, and liquid pigment dispersions in epoxy casting projects.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What happens if I add too much pigment to epoxy resin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Adding more than 5% pigment by weight disrupts the precise stoichiometric ratio of epoxy resin to polyamine hardener. The excess unbound pigment molecules inhibit cross-linking, resulting in a soft, flexible, sticky, or permanently tacky surface."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use food coloring or water-based acrylic paint?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Water is the mortal enemy of epoxy. Introducing water-based food coloring or wet acrylic paints introduces moisture that causes microscopic foaming, bubbles, cloudiness, and compromised tensile strength."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate mica powder for river tables?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A loading ratio of 1.5% to 2.0% of total resin weight delivers a shimmering, opaque river effect that prevents seeing the underlying plywood base. For a 2-gallon pour (~17 lbs of resin), you will need roughly 110 to 150 grams of mica powder."
+        }
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">🎨 Polymer Chemistry & Pigment Saturation Standards</div>
+      <h1>Epoxy Resin Pigment Loading Calculator</h1>
+      <p class="subtitle">Calculate exact pigment weight in grams, percentage loading (0.5% to 5%), and scoop counts for mica powders and liquid resin dyes.</p>
+    </header>
+
+    <!-- AdSense Top Banner -->
+    <div style="text-align:center; margin: 16px 0;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-3381238987477190"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="calc-grid">
+      <!-- Inputs Card -->
+      <form class="card" id="epoxy-pigment-ratio-calculator-form" onsubmit="event.preventDefault();">
+        <h2>📐 Mixed Resin Volume & Pigment Type</h2>
+        
+        <div class="input-row">
+          <div class="form-group">
+            <label for="resinVolume">Total Mixed Resin (Part A + B)</label>
+            <div class="input-wrap">
+              <input type="number" id="resinVolume" step="2" min="1" max="500" value="32" required>
+              <span class="input-suffix">fl oz</span>
+            </div>
+            <span class="hint">1 quart = 32 oz; 1 gallon = 128 oz</span>
+          </div>
+          <div class="form-group">
+            <label for="pigmentType">Pigment & Colorant Formulation</label>
+            <select id="pigmentType">
+              <option value="mica" selected>Pearlescent Mica Powder (Shimmer / River Table)</option>
+              <option value="liquid_dye">Translucent Liquid Resin Dye (Glass / Tint)</option>
+              <option value="solid_paste">Opaque Epoxy Pigment Paste (Deep Solid Color)</option>
+              <option value="glow_powder">Phosphorescent Glow-in-the-Dark Powder</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="form-group">
+            <label for="opacityLevel">Target Visual Opacity</label>
+            <select id="opacityLevel">
+              <option value="0.0075">Translucent / Sheer Tint (~0.75% Weight)</option>
+              <option value="0.0175" selected>Semi-Opaque / Rich Depth (~1.75% Weight)</option>
+              <option value="0.035">Completely Opaque / Solid Color (~3.5% Weight)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="resinDensity">Resin Specific Gravity</label>
+            <div class="input-wrap">
+              <input type="number" id="resinDensity" step="0.05" min="1.0" max="1.25" value="1.10" required>
+              <span class="input-suffix">g/mL</span>
+            </div>
+          </div>
+        </div>
+        
+      </form>
+
+      <!-- Results Card -->
+      <div class="card">
+        <h2>📊 Recommended Pigment Weight & Scoops</h2>
+        
+        <div class="result-hero">
+          <div class="result-hero-val" id="resPigmentGrams">18.2 grams</div>
+          <div class="result-hero-label">Recommended Pigment Weight</div>
+        </div>
+
+        <div class="specs-grid">
+          <div class="spec-item">
+            <div class="spec-desc">Estimated Micro Scoops</div>
+            <div class="spec-val" id="resScoops">~36 Level Scoops (0.5g ea)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Total Mixed Resin Weight</div>
+            <div class="spec-val" id="resResinWeight">1,041 grams (36.7 oz)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Maximum Safety Loading Limit</div>
+            <div class="spec-val" id="resMaxLimit">52.0 g (5.0% Max)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Cure Inhibition Risk</div>
+            <div class="spec-val" id="resCureRisk">Safe (Well within 5% threshold)</div>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+
+    
+
+    <!-- Amazon Supplies Box -->
+    <section class="supplies-card">
+      <h3>🎨 Recommended Mica Powders, Liquid Dyes & Digital Scales</h3>
+      <div class="supplies-grid">
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Pearlescent Mica Powder Pigment Kit (36 Vibrant Colors)</div>
+            <div class="supply-desc">Cosmetic-grade mica powder pigments for resin river tables, epoxy countertops, and jewelry casting.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=mica+powder+epoxy+resin+pigment+set&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Digital Precision Pocket Gram Scale (0.01g Accuracy)</div>
+            <div class="supply-desc">High-accuracy scale to weigh resin colorants and pigment loads to the exact tenth of a gram.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=digital+milligram+gram+scale+precision&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Translucent Liquid Epoxy Dye Concentrates (24 Colors)</div>
+            <div class="supply-desc">High-potency liquid resin tint for stained glass resin effects without clouding clarity.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=epoxy+resin+liquid+dye+translucent&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Reusable Non-Stick Silicone Resin Mixing Cups & Stir Sticks</div>
+            <div class="supply-desc">Graduated silicone measuring beakers that allow cured epoxy and pigment to peel right out.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=silicone+measuring+cups+epoxy+resin&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+      </div>
+      <p style="font-size:0.75rem; color:#94a3b8; margin-top:14px; margin-bottom:0; text-align:center;">
+        ⚖️ <em>Affiliate Notice: As an Amazon Associate, this site earns from qualifying purchases at no additional cost to you. We strictly link to pearlescent mica powders, casting resin colorants, and 0.01g precision scales.</em>
+      </p>
+    </section>
+
+    <!-- FAQ Section for SEO -->
+    <section class="faq-section">
+      <h2 style="font-size:1.35rem; color:#ffffff; margin-bottom:16px;">Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">What happens if I add too much pigment to epoxy resin?</div>
+        <div class="faq-a">Adding more than 5% pigment by weight disrupts the precise stoichiometric ratio of epoxy resin to polyamine hardener. The excess unbound pigment molecules inhibit cross-linking, resulting in a soft, flexible, sticky, or permanently tacky surface.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I use food coloring or water-based acrylic paint?</div>
+        <div class="faq-a">No. Water is the mortal enemy of epoxy. Introducing water-based food coloring or wet acrylic paints introduces moisture that causes microscopic foaming, bubbles, cloudiness, and compromised tensile strength.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I calculate mica powder for river tables?</div>
+        <div class="faq-a">A loading ratio of 1.5% to 2.0% of total resin weight delivers a shimmering, opaque river effect that prevents seeing the underlying plywood base. For a 2-gallon pour (~17 lbs of resin), you will need roughly 110 to 150 grams of mica powder.</div>
+      </div>
+    </section>
+
+    <!-- Bottom AdSense Banner -->
+    <div style="text-align:center; margin: 32px 0;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-3381238987477190"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+      <p>© 2026 <a href='https://sebiglesias.com.ar/'>sebiglesias.com.ar</a> · Epoxy Pigment Ratio Calculator. Artist and woodworking reference tool.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
